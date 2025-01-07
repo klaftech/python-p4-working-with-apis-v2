@@ -1,6 +1,6 @@
 import requests
 import json
-
+import ipdb
 
 class Search:
 
@@ -51,7 +51,13 @@ class Search:
 # results_json = Search().get_search_results_json()
 # print(json.dumps(results_json, indent=1))
 
-search_term = input("Enter a book title: ")
-result = Search().get_user_search_results(search_term)
-print("Search Result:\n")
-print(result)
+# search_term = input("Enter a book title: ")
+# result = Search().get_user_search_results(search_term)
+# print("Search Result:\n")
+# print(result)
+
+#ipdb.set_trace()
+
+results_json = Search().get_search_results_json()
+# json.dumps formats the JSON object in a human readable format
+print(json.dumps(results_json, indent=1))
